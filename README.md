@@ -9,15 +9,6 @@ Uma API financeira desenvolvida com Node.js, TypeScript e Fastify. Criada para o
 - **Fastify** - Framework web rápido e eficiente
 - **TSX** - TypeScript execution environment
 
-## 📋 Funcionalidades
-
-- ✅ Criar conta
-- ✅ Buscar extrato bancário
-- ✅ Realizar depósito
-- ✅ Realizar saque
-- ✅ Buscar dados da conta
-- ✅ Verificação de CPF
-
 ## 🔧 Instalação
 
 ```bash
