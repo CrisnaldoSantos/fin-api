@@ -29,8 +29,6 @@ export default [
     },
     rules: {
       'indent': ['error', 2],
-      'quotes': ['error', 'single'],
-      'semi': ['error', 'never'],
       'no-console': 'off',
       'prefer-const': 'error',
       'no-var': 'error',

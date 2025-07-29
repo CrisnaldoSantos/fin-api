@@ -8,7 +8,7 @@
     "node": ">=22.12.0"
   },
   "scripts": {
-    "dev": "tsx watch src/index.ts",
+    "dev": "tsx watch src/server.ts",
     "build": "tsc",
     "start": "node dist/index.js",
     "preview": "npm run build && npm start",
@@ -16,7 +16,16 @@
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint src/**/*.ts --fix",
     "lint:check": "eslint src/**/*.ts --max-warnings 0",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "knex:migrate:make": "tsx node_modules/.bin/knex migrate:make --knexfile knexfile.ts",
+    "knex:migrate:latest": "tsx node_modules/.bin/knex migrate:latest --knexfile knexfile.ts",
+    "knex:migrate:up": "tsx node_modules/.bin/knex migrate:up --knexfile knexfile.ts",
+    "knex:migrate:down": "tsx node_modules/.bin/knex migrate:down --knexfile knexfile.ts", 
+    "knex:migrate:rollback": "tsx node_modules/.bin/knex migrate:rollback --knexfile knexfile.ts",
+    "knex:migrate:status": "tsx node_modules/.bin/knex migrate:status --knexfile knexfile.ts",
+    "knex:seed:make": "tsx node_modules/.bin/knex seed:make --knexfile knexfile.ts",
+    "knex:seed:run": "tsx node_modules/.bin/knex seed:run --knexfile knexfile.ts",
+    "db:reset": "rm -f tmp/database.db && npm run knex:migrate:latest && npm run knex:seed:run"
   },
   "keywords": [
     "nodejs",
@@ -30,7 +39,9 @@
   "dependencies": {
     "@types/node": "^24.1.0",
     "fastify": "^5.4.0",
+    "knex": "^3.1.0",
     "nodemon": "^3.1.10",
+    "sqlite3": "^5.1.7",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3"
   },
