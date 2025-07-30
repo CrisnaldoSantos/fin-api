@@ -1,22 +1,17 @@
-import Fastify from "fastify";
-
-const fastify = Fastify({
-  logger: true,
-});
-
-fastify.get("/health", async (_request, _reply) => {
-  return { status: "ok", message: "Fin API is running!" };
-});
+import { build } from './infrastructure/http/app';
+import { env } from './shared/env';
 
 const start = async () => {
-  try {
-    const port = process.env.PORT ? parseInt(process.env.PORT) : 3333;
-    const host = process.env.HOST || "0.0.0.0";
+  const app = build({ logger: true });
 
-    await fastify.listen({ port, host });
-    console.log(`🚀 Server running on http://localhost:${port}`);
+  try {
+    await app.listen({ 
+      port: env.PORT, 
+      host: env.HOST 
+    });
+    console.log(`🚀 Server running on http://${env.HOST}:${env.PORT}`);
   } catch (err) {
-    fastify.log.error(err);
+    app.log.error(err);
     process.exit(1);
   }
 };

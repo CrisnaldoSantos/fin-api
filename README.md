@@ -1,6 +1,6 @@
 # Fin API
 
-Uma API financeira desenvolvida com Node.js, TypeScript e Fastify. Criada para o módulo 2 da formação em NodeJS da ReocketSeat.
+Uma API financeira desenvolvida com Node.js, TypeScript e Fastify. Criada para o módulo 2 da formação em NodeJS da RocketSeat. Po´rem modificada para usar uma arquitetura voltada ao de Clean Code
 
 ## 🚀 Tecnologias
 
@@ -53,15 +53,3 @@ A aplicação roda por padrão em:
 - **Porta**: 3333 (configurável via variável de ambiente PORT)
 
 ## 📂 Estrutura do projeto
-
-```
-fin-api/
-├── src/
-│   └── index.ts          # Arquivo principal da aplicação
-├── dist/                 # Arquivos compilados (gerado automaticamente)
-├── package.json          # Dependências e scripts
-├── tsconfig.json         # Configuração do TypeScript
-├── .nvmrc               # Versão do Node.js
-├── .gitignore           # Arquivos ignorados pelo Git
-└── README.md            # Documentação
-```
