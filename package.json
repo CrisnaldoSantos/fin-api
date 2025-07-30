@@ -20,7 +20,7 @@
     "knex:migrate:make": "tsx node_modules/.bin/knex migrate:make --knexfile knexfile.ts",
     "knex:migrate:latest": "tsx node_modules/.bin/knex migrate:latest --knexfile knexfile.ts",
     "knex:migrate:up": "tsx node_modules/.bin/knex migrate:up --knexfile knexfile.ts",
-    "knex:migrate:down": "tsx node_modules/.bin/knex migrate:down --knexfile knexfile.ts", 
+    "knex:migrate:down": "tsx node_modules/.bin/knex migrate:down --knexfile knexfile.ts",
     "knex:migrate:rollback": "tsx node_modules/.bin/knex migrate:rollback --knexfile knexfile.ts",
     "knex:migrate:status": "tsx node_modules/.bin/knex migrate:status --knexfile knexfile.ts",
     "knex:seed:make": "tsx node_modules/.bin/knex seed:make --knexfile knexfile.ts",
@@ -38,12 +38,14 @@
   "license": "ISC",
   "dependencies": {
     "@types/node": "^24.1.0",
+    "dotenv": "^17.2.1",
     "fastify": "^5.4.0",
     "knex": "^3.1.0",
     "nodemon": "^3.1.10",
     "sqlite3": "^5.1.7",
     "tsx": "^4.20.3",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "zod": "^4.0.13"
   },
   "devDependencies": {
     "@eslint/js": "^9.32.0",
